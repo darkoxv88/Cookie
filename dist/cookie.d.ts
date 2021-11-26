@@ -33,7 +33,7 @@ backup:
 
 **/
 
-export declare class CookieOptions {
+declare class CookieOptions {
   public path: string;
   public domain: string;
   public samesite: null | 'lax' | 'strict' | 'none';
