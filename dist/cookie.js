@@ -29,27 +29,29 @@ exports:
 
 backup:
 
-  window.___webpack_export_dp_Cookie___.definition
+  window.___webpack_export_dp___.Cookie;
 
 **/
 
-(function() {
-"use strict";
-
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 var __webpack_exports__ = {};
 
+;// CONCATENATED MODULE: ./src/refs/root.js
 var root = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : typeof self !== 'undefined' ? self : ({ });
 
 function getRoot() {
   return root;
 }
 
+;// CONCATENATED MODULE: ./src/environment.js
 var production = true;
 
 function isProduction() {
   return production;
 }
 
+;// CONCATENATED MODULE: ./src/core/date-handler.js
 function DateHandler() { }
 
 DateHandler.prototype = { }
@@ -84,6 +86,7 @@ DateHandler.createDateInMinutes = function(minutes) {
   return date;
 }
 
+;// CONCATENATED MODULE: ./src/utility/safe-json.js
 function safeJsonParse(value) {
   try
   {
@@ -134,6 +137,7 @@ function safeUriDecode(value) {
 
 }
 
+;// CONCATENATED MODULE: ./src/core/cookie-options.js
 function CookieOptions() { }
 
 CookieOptions.prototype = {
@@ -143,6 +147,12 @@ CookieOptions.prototype = {
   secure: false,
   httponly: false,
 }
+
+;// CONCATENATED MODULE: ./src/core/cookie-handler.js
+
+
+
+
 
 function CookieHandler() { }
 
@@ -262,6 +272,11 @@ CookieHandler.getAll = function() {
   return out;
 }
 
+;// CONCATENATED MODULE: ./src/cookie.js
+
+
+
+
 function Cookie() { }
 
 Cookie.prototype = { }
@@ -302,12 +317,20 @@ Cookie.createDateInMinutes = function(minutes) {
   return DateHandler.createDateInMinutes(minutes);
 }
 
+;// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+
+
+
 var libName = 'Cookie';
 
 try
 {
   if (getRoot()[libName] && isProduction()) {
-    throw new Error('window["' + libName + '"] is already in use! Switching to: ' + 'window["___webpack_export_' + libName + '___"].definition');
+    throw new Error('window["' + libName + '"] is already in use! Switching to: ' + 'window["___webpack_export_dp___"].' + libName);
   }
 
   getRoot()[libName] = Cookie;
@@ -316,11 +339,12 @@ catch(err)
 {
   console.error(err);
 
-	if (typeof(getRoot()['___webpack_export_dp_' + libName + '___']) !== 'object' || !(getRoot()['___webpack_export_dp_' + libName + '___'])) {
-		getRoot()['___webpack_export_dp_' + libName + '___'] = ({ });
+	if (typeof(getRoot()['___webpack_export_dp___']) !== 'object') {
+		getRoot()['___webpack_export_dp___'] = ({ });
 	}
 
-	getRoot()['___webpack_export_dp_' + libName + '___'].definition = Cookie;
+	getRoot()['___webpack_export_dp___'][libName] = Cookie;
 }
 
-})();
+/******/ })()
+;

@@ -60,4 +60,5 @@ export declare class Cookie {
   static createDateInHours(hours: number): Date;
 
   static createDateInMinutes(minutes: number): Date;
+  
 }
