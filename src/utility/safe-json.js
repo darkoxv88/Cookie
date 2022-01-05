@@ -1,7 +1,7 @@
 export function safeJsonParse(value) {
   try
   {
-    if (typeof(value) !== 'string') {
+    if (typeof(value) !== 'string' || !value) {
       return null;
     }
     
@@ -9,7 +9,7 @@ export function safeJsonParse(value) {
   }
   catch (err)
   {
-    return null;
+    return value;
   }
 }
 

@@ -90,7 +90,7 @@ DateHandler.createDateInMinutes = function(minutes) {
 function safeJsonParse(value) {
   try
   {
-    if (typeof(value) !== 'string') {
+    if (typeof(value) !== 'string' || !value) {
       return null;
     }
     
@@ -98,13 +98,13 @@ function safeJsonParse(value) {
   }
   catch (err)
   {
-    return null;
+    return value;
   }
 }
 
 function safeJsonStringify(value) {
   try
-  {    
+  {
     return JSON.stringify(value);
   }
   catch (err)
@@ -149,11 +149,6 @@ CookieOptions.prototype = {
 }
 
 ;// CONCATENATED MODULE: ./src/core/cookie-handler.js
-
-
-
-
-
 function CookieHandler() { }
 
 CookieHandler.prototype = { }
@@ -273,10 +268,6 @@ CookieHandler.getAll = function() {
 }
 
 ;// CONCATENATED MODULE: ./src/cookie.js
-
-
-
-
 function Cookie() { }
 
 Cookie.prototype = { }
@@ -318,13 +309,6 @@ Cookie.createDateInMinutes = function(minutes) {
 }
 
 ;// CONCATENATED MODULE: ./src/index.js
-
-
-
-
-
-
-
 var libName = 'Cookie';
 
 try
