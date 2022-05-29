@@ -27,10 +27,6 @@ exports:
 
   window.Cookie;
 
-backup:
-
-  window.___webpack_export_dp_Cookie___.definition
-
 **/
 
 declare class CookieOptions {

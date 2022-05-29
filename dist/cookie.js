@@ -27,15 +27,10 @@ exports:
 
   window.Cookie;
 
-backup:
-
-  window.___webpack_export_dp___.Cookie;
-
 **/
 
-/******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
-var __webpack_exports__ = {};
+(function() {
+"use strict";
 
 ;// CONCATENATED MODULE: ./src/refs/root.js
 var root = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : typeof self !== 'undefined' ? self : ({ });
@@ -314,7 +309,7 @@ var libName = 'Cookie';
 try
 {
   if (getRoot()[libName] && isProduction()) {
-    throw new Error('window["' + libName + '"] is already in use! Switching to: ' + 'window["___webpack_export_dp___"].' + libName);
+    throw new Error('window["' + libName + '"] is already in use!');
   }
 
   getRoot()[libName] = Cookie;
@@ -322,12 +317,6 @@ try
 catch(err)
 {
   console.error(err);
-
-	if (typeof(getRoot()['___webpack_export_dp___']) !== 'object') {
-		getRoot()['___webpack_export_dp___'] = ({ });
-	}
-
-	getRoot()['___webpack_export_dp___'][libName] = Cookie;
 }
 
 /******/ })()
