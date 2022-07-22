@@ -39,13 +39,6 @@ function getRoot() {
   return root;
 }
 
-;// CONCATENATED MODULE: ./src/environment.js
-var production = true;
-
-function isProduction() {
-  return production;
-}
-
 ;// CONCATENATED MODULE: ./src/core/date-handler.js
 function DateHandler() { }
 
@@ -99,7 +92,7 @@ function safeJsonParse(value) {
 
 function safeJsonStringify(value) {
   try
-  {
+  {    
     return JSON.stringify(value);
   }
   catch (err)
@@ -308,7 +301,7 @@ var libName = 'Cookie';
 
 try
 {
-  if (getRoot()[libName] && isProduction()) {
+  if (getRoot()[libName]) {
     throw new Error('window["' + libName + '"] is already in use!');
   }
 
@@ -319,5 +312,4 @@ catch(err)
   console.error(err);
 }
 
-/******/ })()
-;
+})();

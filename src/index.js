@@ -1,5 +1,4 @@
 import { getRoot } from "./refs/root";
-import { isProduction } from "./environment";
 
 import { Cookie } from "./cookie";
 
@@ -38,7 +37,7 @@ var libName = 'Cookie';
 
 try
 {
-  if (getRoot()[libName] && isProduction()) {
+  if (getRoot()[libName]) {
     throw new Error('window["' + libName + '"] is already in use!');
   }
 
